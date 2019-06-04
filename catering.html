@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Cetering - TopShelf Tampa</title> 
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="JavaScript/JavaScript.js"></script>
+</head>
+    
+<body>
+   <div class="container">
+    <div class="top_limiter">
+       <div class="top_gradient">
+            <div class="top">
+                <div class="logo">
+                    <a href="index.html"><span></span></a> <!-- link za homepage-->
+                </div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li><a href="about.html">about</a></li> <!-- Link -->
+                        <li class="menu_1"><a href="#">menu</a>
+                            <ul class="menu_submenu">
+                                <!---------->
+                                <!-- Link -->
+                                <!---------->
+                                <li><a href="#">menu</a></li>
+                                <li><a href="#">drinks menu</a> </li>
+                                <li><a href="#">weekly specials</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="menu_2"><a href="contact.html">contact</a>
+                            <ul class="contact_submenu">
+
+                                <li><a href="contact.html">contact</a></li>
+                                <li><a href="catering.html">catering</a> </li>
+                                <li><a href="join_the_team.html">join the team</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar">
+                   <i class="icofont-navigation-menu"></i>
+                    <ul class="sidebar_menu"> 
+                        <li><a href="#">About</a></li> <!-- Link -->
+                        <li class="sidebar_menu_1"><a href="#">Menu</a><i class="icofont-rounded-right"></i> <!-- Link -->
+                        </li>
+                        <li class="sidebar_menu_2"><a href="contact.html">Contact</a><i class="icofont-rounded-right"></i>
+                        </li>
+                    </ul>
+                    
+                    <div class="submenu_menu">
+                        <ul class="sidebar_menu_submenu">
+                                <li><i class="icofont-rounded-left"></i></li>
+                                <!---------->
+                                <!-- Link -->
+                                <!---------->
+                                <li><a href="#">Menu</a></li>
+                                <li><a href="#">Drinks menu</a> </li>
+                                <li><a href="#">Weekly specials</a></li>
+                            </ul>
+                    </div>
+                    
+                    <div class="submenu_contact">
+                        <ul class="sidebar_contact_submenu">
+                            <li><i class="icofont-rounded-left"></i></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="catering.html">Catering</a> </li>
+                            <li><a href="join_the_team.html">Join the team</a></li>
+                        </ul>
+                    </div>
+                </div>
+<!--            Kraj menija-->
+            </div>
+<!--        Kraj top dela-->
+        </div>
+<!--    Kraj gradijent dela       -->
+    </div>
+<!--Kraj limitera-->
+
+    <div class="contact_us_cetering">
+        <div><p>CATERING</p></div>
+    </div>
+  
+    <div class="form">
+        <div class="form_form_catering">
+           <form>
+                <input type="text" name="Name" placeholder="Name*" id="name" required>
+
+                <input type="email" name="Email" placeholder="Email address*" id="address" required>
+
+                <input type="text" name="Phone" placeholder="Phone">
+
+                <input type="text" name="People" placeholder="Amount of people being served">
+
+                <input type="text" name="On_site_or" placeholder="Is the event being held on site or is delivery needed">
+
+                <textarea name="Budget" placeholder="What the budget for the event (either per person or total) not including tax or service fee" id="message"></textarea>
+
+                <input type="text" name="occasion" placeholder="What is the occasion" id="occasion">
+
+                <input type="text" name="date" placeholder="When is the event (date and time)" id="date">
+                
+                <div class="radio_class">
+                    <p>What style of cetering?</p>
+                    <input type="radio" name="style" class="style" value="Cocktail" checked><span>Cocktail Style</span><br >
+                    <input type="radio" name="style"  class="style" value="Boxed"><span>Boxed Lunch</span><br>
+                    <input type="radio" name="style"  class="style" value="Buffet"><span>Buffet Style</span><br>
+                    <input type="radio" name="style" class="style" value="Plated"><span>Plated Dinner</span><br>
+                    <input type="radio" name="style" class="style" value="Drink"><span>Drink Service</span><br>
+                    <input type="radio" name="style" class="style" value="Food"><span>Food Stations</span><br>
+                    <input type="radio" name="style"  class="style" value="Platters"><span>Platters</span><br>
+                    <input type="radio" name="style"  class="style" value="Carving"><span>Carving Stations</span><br>
+                </div>
+                <textarea name="Other" placeholder="Other" id="message"></textarea>
+                <textarea name="Special_food" placeholder="Special food needs" id="message"></textarea>
+                <input type="submit" class="button" value="send">
+            </form>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <img src="images/logo_footer.png">
+        <ul class="footer_menu">
+            <!---------->
+            <!-- Link -->
+            <!---------->
+            <li><a href="#">about</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">drinks menu</a></li>
+            <li><a href="#">weekly specials</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li id=footer_menu_last><a href="join_the_team.html">join the team</a></li>
+        </ul>
+        <hr>
+        <p id="signup">SIGN UP FOR OUR FREE NEWSLETTER</p>
+        <form>
+        <span><input type="email" placeholder="Your email" class="button_1" required><button class="button">sing up</button></span>
+        </form>
+        <p><a href="https://www.google.com/maps/place/3173+Cypress+Ridge+Blvd,+Wesley+Chapel,+FL+33544,+USA/@28.1955238,-82.3824801,17z/data=!3m1!4b1!4m5!3m4!1s0x88c2b0a50013f227:0x316a492cb1f71df5!8m2!3d28.1955191!4d-82.3802914?shorturl=1" id="footer_link">3173 Cypress Ridge Blvd, Wesley Chapel, FL 33544<br />813-953-1032</a></p>
+        <p class="footer_uhsome_text">&#169; 2018 Top Shelf Sports Lounge | All rights reserved | Built by <a href="http://uhsome.com/"><img src="images/uhsome.png" class="uhsome"></a></p>
+    </div>
+    </div>
+</body>
+</html>

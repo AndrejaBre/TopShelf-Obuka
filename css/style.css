@@ -1,0 +1,1543 @@
+/*Globalne*/
+/*font-family: 'Montserrat', sans-serif;
+1f343d futer boja i hover
+*/
+
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+body{
+    background-color:#00A3E6;
+    max-width: 100%;
+    box-sizing: border-box;
+/*    overflow-x: hidden;*/
+}
+
+
+.top_limiter{
+    position:fixed;
+    top:0px;
+    width:100%;
+}
+.button{
+    width:180px;
+    height:60px;
+    font-size: 14px;
+    text-align: center;
+    background:#d75100;
+    border:none;
+    color:white;
+}
+.form_button .button:hover{
+    cursor:pointer;
+    transition: background 0.5s ease;
+    background:#1f343d;
+}
+
+.clearfix{
+    zoom:1;
+}
+.clearfix::after{
+    content: '.';
+    display:block;
+    clear:both;
+    height: 0;
+    visibility:hidden;
+}
+/*Globalne kraj*/
+
+/*top deo*/
+.top_limiter{
+    margin:auto;
+    z-index: 1;
+}
+.top_gradient{
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+}
+.top{
+    width:95%;
+    margin:auto;
+    height:87px;
+    padding-top:24px;
+
+}
+
+.logo{
+    float:left;
+    background: url(../images/logo_header.png) no-repeat center;
+    background-size: cover;
+    width:200px;
+    height:40px;
+    margin-top:10px;
+}
+.logo span{
+    position:absolute;
+    width:200px;
+    height: 40px;
+    z-index: 1;
+    content: "";
+}
+.menu{
+    float:right;
+    
+}
+
+.menu ul li{
+    list-style-type:none;
+    display:inline-block;
+    width:90px;
+    height:37px;
+    position: relative;
+    text-align: center;
+    padding-top:20px;
+    font-size:14px;
+}
+
+.menu ul .menu_1 li {
+    width:100%;
+    padding-top: 0px;
+}
+
+.menu ul .menu_2 li {
+    width:100%;
+    padding-top: 0px;
+}
+.menu ul > li:hover {
+    background:#1f343d;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color:#00A3E6;
+
+} 
+
+.menu_submenu, .contact_submenu{
+    display:none;
+}
+
+.menu_submenu{
+    width:150px;
+    height:120px;
+    background:#1f343d;
+    position:absolute;
+    left:-30px;
+    text-align: center;
+    line-height: 2.3;
+    margin-top:10px;
+}
+
+.contact_submenu{
+    width:150px;
+    height:120px;
+    background:#1f343d;
+    position:absolute;
+    left:-30px;
+    margin-top:10px;
+    text-align: center;
+    line-height: 2.3;
+}
+.menu ul .menu_1:hover .menu_submenu{
+    display:block;
+}
+.menu ul .menu_2:hover .contact_submenu{
+    display:block;
+}
+
+.menu ul li:hover > a{
+    color:white;
+}
+.contact_us_content{
+    width:100%;
+    height:280px;
+    
+}
+
+/*sidebar za telefone*/
+
+.sidebar .icofont-navigation-menu{
+    color:#00A3E6;
+    font-size: 35px;
+    position:relative;
+    top:30px;
+    right:100px;
+    display:none;
+    
+}
+.sidebar{
+    display: block;
+    position:fixed;
+    right:-30px;
+    top:0px;
+    width:0%;
+    height: 100%;
+    background-color: #000;
+    color:#00A3E6;
+    transition: 0.3s;
+    z-index: 3;
+}
+.sidebar_menu{
+    position: relative;
+    top:30px;
+}
+
+.sidebar_menu li, .sidebar_menu_submenu li, .sidebar_contact_submenu li{
+    list-style: none;
+    display:block;
+    text-align: left;
+    padding-left:20px;
+    line-height: 1.5;
+    height: 60px;
+    padding-top:20px;
+}
+
+.sidebar_menu li:active, .submenu_menu .sidebar_menu_submenu li:active, .submenu_contact .sidebar_contact_submenu li:active{
+    cursor:pointer;
+    background:rgba(239,239,239,0.1);
+    transition:0.15s;
+}
+
+
+.sidebar_menu li a, .sidebar_menu_submenu li a, .sidebar_contact_submenu li a{
+    color:#00A3E6;
+    text-decoration: none;
+    font-size:24px;
+}
+.sidebar_menu li a::after, .submenu_menu .sidebar_menu_submenu li a::after, .submenu_contact .sidebar_contact_submenu li a::after{
+    position:absolute;
+    display:inline-block;
+    width:80%;
+    height: 80px;
+    content: "";
+    cursor:pointer;
+}
+
+.sidebar_menu_submenu{
+    display: block;
+    position:fixed;
+    right:-30px;
+    top:0px;
+    width:0%;
+    height: 100%;
+    background-color: #000;
+    color:#00A3E6;
+    transition: 0.3s;
+    z-index: 10;
+}
+.sidebar_menu_submenu .icofont-rounded-left, .submenu_contact .sidebar_contact_submenu .icofont-rounded-left{
+    font-size: 24px;
+}
+
+.sidebar_menu_submenu .icofont-rounded-left::after, .submenu_contact .sidebar_contact_submenu .icofont-rounded-left::after{
+    position:absolute;
+    display:inline-block;
+    content:"";
+    width:100%;
+    height:80px;
+    cursor:pointer;
+    
+}
+
+.sidebar_contact_submenu{
+    display: block;
+    position:fixed;
+    right:-30px;
+    top:0px;
+    width:0%;
+    height: 100%;
+    background-color: #000;
+    color:#00A3E6;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.slide_in_sub1{
+    right:0px;
+    top:0px;
+    width:80%;
+}
+
+.slide_in_sub2{
+    right:0px;
+    top:0px;
+    width:80%;
+}
+.slide_out_sub2{
+    right:0px;
+    top:0px;
+    width:0%;
+}
+.icofont-rounded-right{
+    position:absolute;
+    right:0px;
+    font-size: 24px;
+    padding:15px;
+    padding-top:10px;
+}
+.icofont-rounded-right:hover{
+    cursor:pointer;
+}
+.slide_in{
+    right:0px;
+    top:0px;
+    width:80%;
+}
+
+.sidebar_menu_submenu li a{
+    width:100%;
+    height: 100%;
+}
+
+/*sidebar za telefone kraj*/
+/*top deo kraj*/
+
+/*Pocetak content dela*/
+
+.contact_us_content{
+    background: url(../images/specials-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:280px;
+    position:relative;
+    top:0px;
+
+}
+
+.wrapper{
+    width:80%;
+    margin:auto;
+    position: relative;
+    top:160px;
+}
+
+.contact_us_content p {
+    width: 405px;
+    height: 50px;
+    position:relative;
+    margin-right: 250px;
+    float: left;
+    color:white;
+    font-size: 58px;
+    font-weight: 1000;
+}
+.contact_us_content button {
+    position:absolute;
+    float:left;
+    height:60px;
+    width:180px;
+    color:white;
+    background:#00A3E6;
+    border:0px;
+    font-size: 16px;
+   
+}
+.contact_us_content button a {
+    color:white;
+    text-decoration: none;
+}
+.contact_us_content button:hover{
+    cursor:pointer;
+}
+/*Kraj content dela*/
+
+/*Pocetak dela sa formom*/
+.form{
+    margin:auto;
+    text-align: center;
+    width:800px;
+}
+.form_text{
+    width:100%;
+    height:60px;
+    font-size:18px;
+    padding-top:35px;
+    line-height: 1.5;
+}
+.form_form > input, textarea{
+    width:100%;
+    height:70px;
+    margin-top:40px;
+    font-size:22px;
+    text-indent: 30px;
+    
+}
+.form_form > textarea{
+    height:130px;
+    padding-top:30px;
+    margin-bottom: 0px;
+}
+
+.form_form #email, #phone{
+    width:46%;
+}
+.form_form #email{
+    float:right;
+}
+.form_form #phone{
+    float: left;
+}
+
+#mand_fields{
+    color:#fff;
+    font-size: 12px;
+    text-align: left;
+    padding-top:5px;
+}
+
+.form .button{
+    margin-bottom: 30px;
+    width:180px;
+    height:60px;
+    font-size: 14px;
+    text-align: center;
+    background:#d75100;
+    border:none;
+    color:white;
+    text-indent: 0px;
+}
+/*Kraj dela sa formom*/
+
+/*Pocetak dela sa mapom*/
+
+.map{
+    width:100%;
+    height:330px;
+}
+
+/*Kraj dela sa mapom*/
+
+/*Pocetak dela sa informacijama*/
+
+.info{
+    margin:auto;
+    text-align: center;
+    padding:40px 0px 120px 0px;
+    background:#fff;
+}
+.info_normal_text{
+    font-size:18px;
+}
+.info_blue_text, .info_grey, .info_blue{
+    color:#00a3e6;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 900;
+}
+
+.info_grey{
+    color:#a7a7a7;
+}
+.info > p{
+    margin-bottom: 10px;
+}
+/*Kraj dela sa informacijama*/
+
+/*Pocetak footera*/
+
+.footer{
+    width:100%;
+    background:#1f343d;
+    position:relative;
+    bottom:0px;
+    margin:auto;
+    text-align: center;
+}
+.footer img{
+    width:166px;
+    height:74px;
+    margin-top:30px;
+}
+.footer_menu li {
+    display:inline-block;
+    margin-top:30px;
+}
+.footer_menu li:hover a{
+    color:white;
+}
+.footer_menu li a{
+    color:#00a3e6;
+    text-decoration: none;
+}
+.footer_menu > li{
+    margin-right:40px;
+}
+.footer_menu #footer_menu_last{
+    margin-right: 0px;
+}
+.footer hr{
+    margin:auto;
+    margin-top:30px;
+    width:700px;
+    color:#9c9c9c;
+    opacity: 0.2;
+    height:0px;
+}
+.footer > p{
+    margin-top:30px;
+    color:#9c9c9c;
+    font-size: 14px;
+}
+.footer #signup{
+    margin-bottom: 30px;
+}
+.footer .button{
+    width:112px;
+    height: 60px;
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: 'Montserrat', 'sans-serif';
+}
+.footer input{
+    width:365px;
+    height: 60px;
+    border:none;
+    text-indent: 30px;
+    font-size: 24px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+#footer_link {
+    color:#9c9c9c;
+    text-decoration: none;
+}
+.footer > .footer_uhsome_text{
+    font-size: 12px;
+    padding-bottom: 30px;
+    margin-top:0px;
+}
+.uhsome{
+    max-width: 54px;
+    max-height: 16px;
+}
+/*Kraj footera*/
+
+/*Pocetak keterig dela*/
+
+.contact_us_cetering{
+    background: url(../images/catering_bcg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:500px;
+    position:relative;
+    top:0px;
+
+}
+.contact_us_cetering p {
+    position:relative;
+    width: 405px;
+    height: 50px;
+    top:360px;
+    left:81px;
+    color:white;
+    font-size: 58px;
+    font-weight: 1000;
+}
+
+
+.form_form_catering{
+    margin-top:35px;
+}
+.form_form_catering form > input{
+    width:800px;
+    height:70px;
+    margin-bottom: 35px;
+    font-size: 24px;
+    text-indent: 30px;
+}
+
+#name, #address, #occasion, #date{
+    width:380px;
+}
+.form_form_catering #name{
+    float:left;
+    width: 380px;
+    height: 70px;
+}
+.form_form_catering #address{
+    float:right;
+    width: 380px;
+    height: 70px;
+}
+.form_form_catering #occasion{
+    float:left;
+}
+.form_form_catering #date{
+    float:right;
+}
+.form_form_catering #message{
+    width:770px;
+    text-indent: 0px !important;
+    padding-left: 30px;
+    height:130px;
+    margin:0px 0px 35px 0px;
+    padding-top:30px;
+}
+.form_form_catering .radio_class{
+    width:100%;
+    text-align: left;
+    margin:30px 0px 30px 0px;
+    font-size: 16px;
+}
+.form_form_catering .radio_class > p{
+    padding: 20px 0px 20px 0px;
+    color:white;
+}
+.form_form_catering .radio_class > span{
+    color:white;
+    padding-left: 10px;
+}
+
+.form_form_catering input.style:not(type="submit"){
+    margin:0px;
+    text-indent: 0px;
+    max-width:30px;
+    max-height: 10px;
+    text-align: left;
+}
+.form_button_cetering{
+    margin-bottom: 130px;
+}
+.form_form_catering .button:hover{
+    cursor: pointer;
+    transition:background 0.5s ease;
+    background:#1f343d;
+}
+/*Kraj keterig dela*/
+
+/*Pocetak join the team dela*/
+
+.contact_us_jtt{
+    background: url(../images/team_bcg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:280px;
+    position:relative;
+    top:0px;
+
+}
+.contact_us_jtt p {
+    width: 610px;
+    height: 120px;
+    position:relative;
+    top:100px;
+    left:81px;
+    color:white;
+    font-size: 58px;
+    font-weight: 1000;
+}
+
+.form_form_catering .personal{
+    color:white;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.form_jjt #name, .form_jjt #birth, .form_jjt #email{
+    width:100%;
+    height:70px;
+    clear: both;
+}
+.form_jjt #address, .form_jjt #state, .form_jjt #phone{
+    float:left;
+    width:380px;
+}
+.form_jjt #city, .form_jjt #zip, .form_jjt #mobile{
+    float:right;
+    width:380px;
+}
+.form_jjt .form_felony{
+    margin:30px 0px 0px 0px;
+}
+.form_jjt .form_us_citizen{
+    margin:0px;
+}
+.form_jjt .form_drug_test{
+    margin:30px 0px 0px 0px;
+}
+.form_jjt .form_drug_test_radio{
+    margin:0px 0px 30px 0px;
+}
+.form_us_citizen, .form_felony, .form_drug_test, .form_us_citizen_radio, .form_felony_radio, .form_drug_test_radio{
+    text-align: left;
+    color:white;
+}
+
+.form_us_citizen_radio, .form_felony_radio, .form_drug_test_radio{
+    padding:10px 0px 10px 10px;
+}
+.form_Employment{
+    color:white;
+    float:left;
+    margin-bottom: 30px;
+}
+
+.full_time, .part_time, .seasonal{
+    padding:0px 10px 0px 10px;
+}
+
+.radio_move{
+    margin-left:10px;
+}
+.position, .shift{
+    text-indent: 0px;
+    width:100%;
+    color:white;
+    clear: both;
+    font-size: 40px;
+    margin:40px 0px 40px 0px;
+    text-align: center;
+    padding:0px;
+}
+
+.shifts, shifts2{
+    align-self: auto;
+    display: inline-block;
+    text-align: center;
+    width:100%;
+    margin-bottom: 30px;
+}
+.shifts > input{
+    width:12.2%;
+    height: 70px;
+    margin-right:10px;
+    font-size: 24px;
+    text-indent: 20px;
+}
+.shifts_text{
+    text-align:left;
+    color:white;
+}
+
+#sun{
+    margin:0px;
+}
+
+.shifts2 > input{
+    width:12.2%;
+    height: 70px;
+    margin-right:10px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-indent: 20px;
+} 
+.shifts_text2{
+    text-align: left;
+    color:white;
+}
+.education p{
+    color:white;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.education > input{
+    font-size: 24px;
+    text-indent: 20px;
+}
+.education #location{
+    float:right;
+    width:380px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+.education #school{
+    float:left;
+    width:390px;
+    height: 70px;
+    margin-bottom: 15px;
+}
+#years, #major, #degree{
+    float:left;
+    width:256px;
+    height:70px;
+    border:none;
+    margin-bottom: 30px;
+}
+
+#years, #degree{
+    margin-right:15px;
+}
+.hr{
+    width:100%;
+    margin:30px 0px 30px 0px;
+    
+}
+.ref{
+    margin:40px 0px 30px 0px;
+    color:white;
+    font-size: 40px;
+    
+}
+.ref_div > input{
+    clear: both;
+}
+.ref_div{
+    text-align: center;
+    margin:auto;
+    display: grid;
+    grid-template-columns:repeat(4, 23.5%);
+    grid-column-gap: 15px;
+}
+
+.ref_div #name{
+}
+.ref_div #name, .ref_div #title, .ref_div #company, .ref_div > #phone2{
+    height: 70px; 
+    margin-bottom: 30px;
+    font-size: 24px;  
+}
+
+.ref_div #name::placeholder, .ref_div #title::placeholder, .ref_div #company::placeholder, .ref_div #phone2::placeholder {
+    font-size: 24px;
+    padding-left: 20px;
+    
+}
+.history .p_history{
+    color:white;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.history .emp_left, .emp_right{
+    width: 380px;
+    height: 70px;
+    font-size: 24px;
+    text-indent: 20px;
+    margin-bottom: 30px;
+}
+
+.history .emp_left{
+    float:left;
+}
+
+.history .emp_right{
+    float:right;
+}
+
+.history .history_hr{
+    width:100%;
+    height: 0px;
+    margin-bottom: 30px;
+}
+jtt_date{
+    width:100%;
+    height: 70px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    text-indent: 20px;
+}
+/*Kraj join the team dela*/
+
+/*Pocetak glavne strane*/
+
+.slick_slider{
+    position: relative;
+    width:100%;
+    top:0px;
+    height: 100%;
+}
+
+.slick_slider .slide_1{
+     background:url(../images/slika1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:110vh;
+}
+
+.slick_slider .slide_2{
+    background:url(../images/slika2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:110vh;
+}
+
+.slick_slider .slide_3{
+    background:url(../images/slika3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:110vh;
+}
+.slick_slider .slide_4{
+    background:url(../images/slika4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:110vh;
+}
+.slick_slider .slide_5{
+    background:url(../images/slika5.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:110vh;
+}
+.slick_slider .slide_6{
+    background:url(../images/slika6.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:110vh;
+}
+
+.slide_6, .slide_1, .slide_2, .slide_3, .slide_4, .slide_5{
+    color:white;
+}
+
+.slide_div{
+    position:relative;
+    top:170px;
+}
+.h1_slide{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0px 0px 20px;
+}
+.p_slide{
+    font-size: 18px;
+    text-align:center;
+    line-height: 30px;
+    font-weight:300;
+}
+.slide_6 div, .slide_1 div, .slide_2 div, .slide_3 div, .slide_4 div, .slide_5 div{
+    margin:auto;
+    position:relative;
+    text-align: center;
+    margin:50px 0px;
+}
+.btnReverse{
+    background:#1f343d;
+}
+.btnReverse, .button_sl{
+    margin:0px 5px;
+}
+.button_sl:hover{
+    cursor:pointer;
+    transition: background 0.5s ease;
+    background:#1f343d;
+}
+.slide_6 .btnReverse:hover, .slide_1 .btnReverse:hover{
+    background:#d75100;
+}
+
+.prev{
+    display: block;
+    z-index: 10;
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:300px;
+    left:20px;
+    font-size:42px;
+    color:white;
+}
+
+.next{
+    position:absolute;
+    display: block;
+    z-index: 10;
+    width:20px;
+    height:20px;
+    top:300px;
+    right:40px;
+    font-size:42px;
+    color:white;
+}
+
+.slider_image{
+    background:url(../images/checkin-logo.png);
+    background-repeat: no-repeat;
+    width:75px;
+    height:85px;
+    position:absolute;
+    top:460px;
+    left:47%;
+    transition:0.5s ease-in-out;
+}
+
+.slider_image_move{
+    top:470px;
+}
+
+.john_snow{
+    width:100%;
+    background:url(../images/snow-bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    height:550px;
+}
+.snow_top{
+    width:100%;
+    height:165px;
+    background:url(../images/snow-bg-top.png);
+    background-repeat: repeat-x;
+    position:relative;
+    top:-70px;
+}
+
+.snow_text{
+    position:relative;
+    top:-70px;
+    float:left;
+}
+.snow_text h2{
+    color:#1f343d;
+    font-size:48px;
+    line-height:48px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.snow_text h3{
+    color:#00a3e6;
+    font-size:30px;
+    line-height:36px;
+    margin-bottom: 30px;
+}
+.snow_text p{
+    width:40%;
+    color:#000;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom:60px;
+}
+.snow_hockeyStick{
+    position:relative;
+    top:-170px;
+    right:0px;
+    width:100%;
+    background:url(../images/hockey-stick.png) bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:535px;
+
+}
+.landing{
+    background:#fff;
+}
+.wait_list{
+    margin:60px 0px 60px 0px;
+    font-size: 14px;
+}
+.top_wait_list, .bottom_wait_list{
+    border: 1px solid #c9c9c9;
+    padding:10px;
+    text-align:center;
+    margin:auto;
+    width:20%;
+    padding:20px 0px 20px 0px;
+}
+.top_wait_list{
+    font-size:16px;
+    font-weight:700;
+    
+}
+.wait_limit{
+    position:relative;
+    margin:auto;
+    width:80%;
+}
+.wait_limit > *{
+    padding:10px 0px 10px 0px;
+}
+.wait_limit .dot{
+    padding:2px 0px 2px 0px;
+    margin:0px;
+    height:10px;
+    position:relative;
+    left:10px;
+    text-align: left;
+}
+.wait_limit p span{
+    position:absolute;;
+    left:0px;
+    font-size:24px;
+    color:#818181;
+}
+.yelp_button{
+    border-radius: 5px;
+    height:35px;
+    width:90%;
+    margin:auto;
+    background:#af0606;
+    font-weight:700;
+    color:white;
+    font-size:12px;
+    margin-top:20px;
+    border:none;
+}
+.yelp_text{
+    color:#818181;
+    font-size: 12px;
+    margin-top:10px;
+}
+.yelp_text img{
+    width:50px;
+    height:auto;
+    vertical-align: bottom;
+}
+.food_left{
+    margin:25px 0px 60px;
+    max-width: 500px;
+    width:100%;
+}
+.food_picture{
+    background:url(../images/food-img.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    width:600px;
+    height: 400px;
+}
+.food_text, .drinks_text{
+    margin:30px 0px 30px 50px;
+}
+.food_text h3, .drinks_text h3{
+    color:#00a3e6;
+    font-size:30px;
+    line-height: 36px;
+    
+}
+.food_text h2, .drinks_text h2{
+    color:#1f343d;
+    font-size:48px;
+    line-height: 48px;
+}
+.food_text p, .drinks_text p{
+    font-size:18px;
+    line-height: 30px;
+    width:100%;
+    margin:20px 0px 60px;
+}
+
+
+.drinks_text p{
+    width:50%;
+}
+
+.drinks_picture{
+    background:url(../images/drinks-img.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:600px;
+    height:400px;
+    float:right;
+    display:block;
+}
+
+.drinks_text{
+    float:left;
+    display:block;
+    position:relative;
+/*    left:40px;*/
+}
+.happy_hours{
+    width:100%;
+    background:url(../images/happy-hours-bg.jpg) fixed;
+    height:90vh;
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.happy_hours_limit{
+    margin:0 auto;
+    width:50%;
+    text-align: center;
+
+}
+.happy_hours_limit h3{
+    color:#fff;
+    font-size:30px;
+    line-height: 36px;
+    padding:20% 0px 0px 0px
+}
+.happy_hours_limit h2{
+    color:#fff;
+    font-size:48px;
+    line-height: 48px;
+}
+.happy_hours_limit p{
+    color:#fff;
+    font-size:18px;
+    line-height: 30px;
+    width:100%;
+    margin:20px 0px 60px;
+}
+/*Kraj glavne strane*/
+
+/*Pocetak about dela*/
+.about_container{
+    background:white;
+}
+
+.contact_us_about{
+    background: url(../images/about-top-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:500px;
+    position:relative;
+    top:0px;
+
+}
+.contact_us_about p:first-child {
+    position:relative;
+    width: 405px;
+    height: 50px;
+    top:190px;
+    left:81px;
+    color:white;
+    font-size: 58px;
+    font-weight: 700;
+}
+.contact_us_about p:last-child {
+    position:relative;
+    margin-top:20px;
+    width: 45%;
+    height: 50px;
+    top:200px;
+    left:81px;
+    color:white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height:30px;
+}
+
+.team_cheer{
+    width:100%;
+    background-color:white;
+    height:400px;
+}
+
+.team_limit{
+    padding-left:50px;
+    padding-top:100px;
+    background-image:url(../images/hockey-stick.png);
+    background-repeat: no-repeat;
+    background-position:bottom right;
+    height:70%;
+}
+
+.team_limit h2{
+    color:#1f343d;
+    font-size:48px;
+    line-height: 48px;
+    margin-bottom: 10px;
+    font-weight:700;
+}
+
+.team_limit h3{
+    color:#00a3e6;
+    font-size:30px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+.team_limit p{
+    font-size:18px;
+    line-height: 30px;
+    width:50%;
+    margin:20px 0px 60px;
+}
+.about_left{
+    float:left;
+    width:49.5%;
+    height:auto;
+}
+
+.info .info_about{
+    float:right;
+    width:49.5%;
+}
+.info_about .btnReverse{
+    transition:0.3s;
+}
+.info_about .btnReverse:hover{
+    background:#d75100;
+}
+/*Kraj about dela*/
+/*=============================================*/
+/*============ 768p ===========================*/
+/*=============================================*/
+
+/*Pocetak za tablet (768p)*/
+@media(max-width:768px){
+    *{
+        text-align: center;
+    }
+    .contact_us_content p{
+        font-size: 2em;
+        text-align: center;
+        margin-right: 0px;
+        clear: both;
+        top:-10px;
+        width:100%;
+        float: none;
+    }
+    .contact_us_content button{
+        position:absolute;
+        clear:both;
+        width:40%;
+        margin:auto;
+        left:0px;
+        right:0px;
+    }
+
+    .wrapper{
+        width:80%;
+        margin:auto;
+        position: relative;
+        top:160px;
+}
+   
+    .form{
+        margin:auto;
+        width:80%;
+    }
+    .form_form{
+        margin-top:20px;
+    }
+    .form .form_text p {
+        font-size: 22px;
+    }
+    .form .form_form > input{
+        width:100%;
+        height:3em;
+    }
+    
+    .form_form #email, #phone{
+    width:100%;
+    }
+    .form_form #email{
+        clear: both;
+    }
+    .form_form #phone{
+        clear: both;
+    }
+    #mand_fields{
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .form_form_catering #message{
+    width:100%;
+    text-indent: 0px !important;
+    padding-left: 0px;
+    height:3em;
+    margin:0px 0px 35px 0px;
+    padding-top:30px;
+}
+    .form_form .button{
+        width:30% !important;
+        height:60px !important;
+    }
+    .footer_menu li {
+        display:block;
+        text-align: center;
+    }
+    .footer_menu > li{
+        margin:10px 0px 0px 0px;
+    }
+    .footer img{
+        margin-bottom: 10px;
+    }
+    .footer hr{
+        width:90%;
+    }
+    .button_1{
+        text-align: center;
+    }
+    .sidebar .icofont-navigation-menu{
+    color:#00A3E6;
+    font-size: 35px;
+    position:relative;
+    top:30px;
+    right:70px;
+    display:flex;
+    }
+    
+    .top .menu{
+        display:none;
+    }
+    
+    .container{
+        transition: 0.3s;
+        position:relative;
+        right:0;
+        top:0;
+    }
+    .containerSlide{
+        position:relative;
+        right:80%;
+        top:0px;
+    }
+    
+/*    Pocetak ketering dela*/
+    
+    .contact_us_cetering{
+        height: 260px;
+        width:100%;
+        background-position: right 0px bottom -70px;
+        background-attachment: scroll;
+    }
+    
+    .contact_us_cetering p{
+        font-size: 2em;
+        display:inline;
+        clear: both;
+        top:0px;
+        left:0px;
+    }
+    .contact_us_cetering div{
+        position: relative;
+        top:100px;
+        margin:auto;
+        width: 50%;
+        height:auto;
+        text-align: center;
+    }
+    .form_form_catering #name, #address{
+        clear:both;
+        width:100%;
+        height: 70px;  
+    }
+    .form_form_catering #address{
+        float: left;
+        width:100%;
+    }
+    
+    .form_form_catering input[type='text']{
+        width:100%;
+        display: block;
+        clear:both;
+    }
+    
+    .form_form_catering #occasion{
+        clear:both;
+        width:100%;
+    }
+    .form_form_catering #date{
+        clear:both;
+        width:100%;
+    }
+    
+    .radio_class span, p{
+        font-size: 1.5em;
+    }
+    .form_form_catering input.style{
+        margin:0px;
+        text-indent: 0px;
+        max-width:3em;
+        max-height: 3em;
+        text-align: left;
+    }
+    
+/*    Kraj ketering dela*/
+
+    
+/*Pocetak join the team dela*/
+    
+    .contact_us_jtt div{
+        margin:auto;
+        width:60%;
+        height: auto;
+        position:relative;
+        top:60px;
+        text-align: center;
+        font-size: 1em;
+        padding-top:80px;
+    }
+    .contact_us_jtt div p{
+        text-align: center;
+        margin:auto;
+        top: 0px;
+        left: 0px;
+        font-size: 2em;
+        width:100%;
+        height: auto;
+    }
+    .contact_us_jtt{
+        top:0px;
+        background: url(../images/team_bcg.jpg);
+        background-position: right 0px bottom 0px;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width:100%;
+        height:280px;
+        position:relative;
+    }
+    .form_jjt #address, .form_jjt #state, .form_jjt #phone{
+        clear: both;
+        width:100%;
+    }
+    .form_jjt #city, .form_jjt #zip, .form_jjt #mobile{
+        clear: both;
+        width:100%;
+    }
+    .form_us_citizen, .form_felony, .form_drug_test{
+        text-align: center;
+    }
+    .form_us_citizen_radio p, .form_felony_radio p, .form_drug_test_radio p{
+        text-align: center;
+    }
+    
+    .form_us_citizen_radio, .form_felony_radio, .form_drug_test_radio{
+        margin:auto;
+        width:100%;
+    }
+    
+    .shifts_text{
+        margin:30px 0px 10px 0px;
+        text-align: center;
+    }
+    .shifts2 > input{
+        margin:0px 0px 15px 0px;
+    }
+    
+    .education p {
+        margin-top:30px;
+    }
+    .form_jjt .education #school, .form_jjt .education #location, .form_jjt .education #years, .form_jjt .education #degree, .form_jjt .education #major{
+        clear:both;
+        width:100%;
+    }
+    .ref_div{
+        text-align: center;
+        margin:auto;
+        display: block;
+}
+    .ref_div #name{
+        
+    }
+    .ref_div #name, .ref_div #title, .ref_div #company, .ref_div > #phone2{
+        height: 70px; 
+        margin-bottom: 30px;
+        font-size: 24px;  
+}
+    
+    
+/*Kraj join the team dela*/
+}
+
+/*Kraj za tablet (768p)*/
